@@ -2,7 +2,8 @@ import React from 'react';
 import { Calendar, Clock, Heart, Edit2, Trash2, Share2, Download, Tag } from 'lucide-react';
 import { BlogPost } from '../../types';
 import { Button } from '../ui/Button';
-import { formatDate, formatFileSize, getFileIcon, downloadFile } from '../../utils/fileUtils';
+import { formatFileSize, getFileIcon, downloadFile } from '../../utils/fileUtils';
+import { formatDate } from '../../utils/storage';
 
 interface BlogCardProps {
   post: BlogPost;
