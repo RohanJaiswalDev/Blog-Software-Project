@@ -165,11 +165,13 @@ function App() {
         )}
       </main>
 
-      <ShareModal
-        isOpen={!!sharePost}
-        onClose={() => setSharePost(null)}
-        post={sharePost!}
-      />
+      {sharePost && (
+        <ShareModal
+          isOpen={!!sharePost}
+          onClose={() => setSharePost(null)}
+          post={sharePost}
+        />
+      )}
 
       <Modal
         isOpen={!!deletePostId}
